@@ -1,0 +1,26 @@
+e.target.value is where the value of inputted value is going to
+higher order function is a function that accepts another function example map
+
+another name for array is list
+
+to partition the screen use window + direction left or right
+
+map the square in the website and add a footer
+
+font.google/icons
+
+window dot for emoji
+
+id
+name
+category
+image
+new price
+old price
+
+10 lamborghini models 
+
+another type of div
+ <>
+</>
+<React.Fragment className= ></React.Fragment>

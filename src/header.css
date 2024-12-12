@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.site-top{
+  height: 5vh;
+  width: 100%;
+  background-color: #222831;
+  
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: none;
+  
+}
+
+.first-container{
+  display: flex;
+  gap: 3rem;
+  
+  
+}
+
+.second-container{
+  display: flex;
+  gap: 3rem;
+  margin-right: 3rem;
+}
+
+.flex{
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .site-top{
+    display: flex;
+  }
+
+}
