@@ -1,22 +1,23 @@
-.popular{
+.new-collections{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   margin-top: 12rem;
   
   justify-content: center;
+  margin-bottom: 100px;
   
   
 }
 
-.popular h1{
+.new-collections h2{
   color: #171717;
   font-size: 50px;
   font-weight: 600;
 }
 
-.popular hr{
+.new-collections hr{
   width: 200px;
   height: 6px;
   border-radius: 10px;
@@ -24,11 +25,11 @@
   
    
 }
-.popular-item{
+.collections{
   margin-top: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
  gap: 30px;
  align-items: center;
  justify-content: center;
@@ -38,13 +39,13 @@
 }
 
 @media (max-width: 1250px){
-  .popular{
-      margin-top: 55rem;
+  .new-collections{
+      /* margin-top: 55rem; */
   }
-  .popular-item{
+  .collections{
     
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    
     gap: 50px;
 
    
@@ -55,16 +56,16 @@
   }
 
   @media (max-width: 1060px){
-    .popular{
-        margin-top: 60rem;
+    .new-collections{
+        /* margin-top: 60rem; */
     }
   
       
     }
 
     @media (max-width: 910px){
-      .popular{
-          margin-top: 65rem;
+      .new-collections{
+          /* margin-top: 65rem; */
       }
     
     
@@ -72,19 +73,19 @@
       }
 
       @media (max-width: 850px){
-        .popular{
-            margin-top: 60rem;
+        .new-collections{
+            /* margin-top: 60rem; */
         }
-        .popular h1{
+        .new-collections h1{
         
           font-size: 30px;
           font-weight: 500;
         }
 
-        .popular-item{
+        .collections{
     
           grid-template-columns: 1fr ;
-          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+          
           gap: 35px;
         
         }
@@ -93,8 +94,8 @@
         }
 
         @media (max-width: 580px){
-          .popular{
-              margin-top: 68rem;
+          .new-collections{
+              /* margin-top: 68rem; */
           }
   
        

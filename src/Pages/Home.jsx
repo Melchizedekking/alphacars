@@ -7,6 +7,8 @@ import Nav from "../Nav"
 import Popular from "../component/Popular"
 import './Home.css'
 import Offers from "../component/Offers"
+import NewCollections from "../component/NewCollections"
+import NewsLetter from "../component/NewsLetter"
 
 const Home = () => {
   return (
@@ -17,6 +19,8 @@ const Home = () => {
   <Testimonial testimony={testimony}/>
   <Popular  />
   <Offers />
+  <NewCollections />
+  <NewsLetter />
   </div>
   )
 }
