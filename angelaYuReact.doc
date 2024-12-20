@@ -1,0 +1,153 @@
+&& in React
+
+react uses && operator from if and else statement
+
+example if (25 > 20 && 25 < 30) this function will run
+
+but  if (19 > 20 && 19 < 30) this function will not run because it fails the first argument.
+
+tenary operator 
+
+isLoggedIn = true
+
+isLoggedIn? <h1>Hello</h1> : null
+
+&& in React
+
+isLoggedIn && <h1>Hello</h1> if isLoggedIn is true this will run if is isLoggedIn is false none of the code will run.
+
+another example
+Time < 10  && <h1>Hello</h1>
+
+userisregistered? login : register
+
+
+const strikethrough = {text-decoration: line-through};
+this can be a function
+
+Example use state
+
+const [count, setCount] = useState(0)
+
+function increase() {
+  setCount(count + 1);
+}
+
+function decrease() {
+  setCount(count - 1);
+}
+
+
+<h1>{count}</h1>
+<button onClick={increase}>+</button>
+<button onClick={decrease}>-</button>
+
+useState function comes from our react module, and when we call this function we get to define an intial value useState(intialValue), then we get to use this value in our destructured array called count in this instance then we will be using setcount to keep changing the value of count
+
+function to get Time 
+const time = new Date().toLocalTimeString();
+
+
+setInterval(funtion,time)
+
+use state example for updating time
+
+  const now = new Date().toLocaleTimeString();
+  const [time, setTime] = useState(now);
+  function updateTime(){
+    setTime(now)
+  }
+
+<h1>{time}</h1>
+<button onClick={updateTime}>newtime</button>
+
+
+example of destructuring an object;
+
+const colors = [{color: 'black', sound: 'meow'}, {color: 'white', sound: 'wolf wolf'}];
+
+const [dark, bright] = colors;
+
+console.log(dark);
+
+const {color, sound} = dark;
+
+we can provide an alternative name for an object like this
+
+const {color: hue, sound: drumbeat} = dark; this dark properties name has been changed and has no asses to its formal name.
+
+
+const {color = 'blue', king = 'geezy'} = dark; if our date dont have a default value the value we listed above will be displayed.
+
+
+
+const colors = [{color: 'black', sound: 'meow', foodrequirment: {food: 1, water: 2}}, {color: 'white', sound: 'wolf wolf'}];
+
+const [dark, bright] = colors;
+
+
+const {color, sound, foodrequirment: {food, water}} = dark;
+
+console.log(food);
+
+this how to destructure an object inside of an object.
+
+you can destructure any part of the object you want to distructure like example
+
+const {foodrequirment: {food, water}} = dark;
+
+
+
+handeling event we can use w3schools html event attribute
+
+onmouseout
+onmouseover
+
+Managing state example  
+
+const backgroundWhite = { color: 'black', padding: '0.5rem 3rem', fontSize: '15px', margin: '30px 0', borderRadius: '10px', backgroundColor: 'white'};
+
+const backgroundBlack = { color: 'white', padding: '0.5rem 3rem', fontSize: '15px', margin: '30px 0', borderRadius: '10px', backgroundColor: 'black'};
+
+  const[background, setbackground]=useState(backgroundWhite)
+
+  <button onMouseOut={()=>{setbackground(backgroundWhite)}} onMouseOver={()=>{setbackground(backgroundBlack)}} style={background}>Submit</button> 
+
+  another example of use state;
+
+  const[isMouseOver, setMouseOver]=useState(false)
+
+  <button onMouseOut={()=>{setMouseOver(false)}} onMouseOver={()=>{setMouseOver(true)}} style={{ color: isMouseOver? 'white' : 'black', padding: '0.5rem 3rem', fontSize: '15px', margin: '30px 0', borderRadius: '10px', backgroundColor: isMouseOver? 'black' :'white'}}>Submit</button>
+
+
+  onChange={} is an event in the input that is trigard when you type anything inside the input. and it also passses the object that triggard the event
+   
+   const[name, setName] = useState('')
+
+  <input onChange={(event)=>{setName(event.target.value)}} type='text' placeholder="what's your name" value={name}/> 
+
+
+
+  another example OF useSTATE WITH INPUT AND A BUTTON.
+
+    
+  const[name, setName] = useState('')
+  const[title, setTitle]= useState('')
+
+   <h1>{title}</h1>
+      <input onChange={(event)=>{setName(event.target.value)}} type='text' placeholder="what's your name" value={name}/> 
+      <button onClick={()=>{setTitle(name)}} >submit</button>
+
+another way of working with form by using the form wrapper and stoping the default setting that hinders us from perfoming our required actions.
+
+const[name, setName] = useState('')
+  const[title, setTitle]= useState('')
+
+
+<h1>{title}</h1>
+        <form onSubmit={(event)=>{setTitle(name); event.preventDefault();}}>
+      <input onChange={(event)=>{setName(event.target.value)}} type='text' placeholder="what's your name" value={name}/> 
+      <button type='submit'>submit</button></form>
+
+
+      

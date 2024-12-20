@@ -13,7 +13,7 @@
   align-items: center;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  display: none;
+  display: flex;
   
 }
 
@@ -34,9 +34,9 @@
   display: flex;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .site-top{
     display: flex;
   }
 
-}
+} */

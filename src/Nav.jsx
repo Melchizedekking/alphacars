@@ -37,7 +37,7 @@ const Nav = () => {
         <li ><NavLink to={'/contact'} href="">Contact</NavLink></li>
       </ul>
        <ul className='nav-third-section'>
-       <li><NavLink to={'/login'} href=""><img src={profileIcon} width={'20'} alt="" /></NavLink></li>
+       <li><NavLink to={'/login'} href="" className={'login'}><span> Login</span> <img src={profileIcon} width={'20'} alt="" /></NavLink></li>
         <li className='relative'><NavLink to={'/cart'} href=""><img src={cartIcon}  width={'30'} alt="" />
         <p className='cartCounter'>2</p>
         </NavLink>

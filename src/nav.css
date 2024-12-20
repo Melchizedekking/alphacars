@@ -8,7 +8,7 @@ body{
   position: relative;
   background-color: #EEEEEE;
   padding: 2rem;
-  z-index: 999;
+  z-index: 9999;
  }
 
 .nav-main-container{
@@ -69,7 +69,11 @@ li{
   display: flex;
 }
 
+.login{
+  display: flex;
+  gap: 0.3rem;
 
+}
 
 
 
@@ -88,7 +92,7 @@ li{
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  /* z-index: 999; */
   background-color: #ffffff11;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px #0000001a;
@@ -151,12 +155,16 @@ li{
   
 }
 
+.car-model-case:hover .carmodel-list a{
+  color: black;
+}
+
 .carmodel-list a{
-  color: #6b7280;
+ 
+  padding: 0.5rem 0;
 }
 
 .carmodel-list a:hover{
-  color: black;
   background-color: white;
 }
 

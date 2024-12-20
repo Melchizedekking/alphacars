@@ -1,0 +1,99 @@
+
+useState can also be an object, name attribute in input corosepond to the input name where the invent is being triggard. if the set function is not being used our state will remain as the intialValue. never use this inside a set function event.target.value; event is not a real event thats why.
+
+ const [fullName, setfullName] = useState({
+    fName: "",
+    lName: ""
+  });
+
+ function handleChange(event){
+  const newValue = event.target.value;
+  const inputName = event.target.name;
+  
+    setfullName((preValue)=>{
+      if (inputName === 'fName'){
+        return{
+        fName: newValue,
+        lName: preValue.lName
+      }
+      } else if (inputName === 'lName'){
+        return{
+        lName: newValue,
+        fName: preValue.fName
+      }
+      }
+ });
+ 
+ 
+}
+
+
+  <h1>{fullName.fName} {fullName.lName}</h1>
+
+<input 
+name='fName'
+onChange={handleChange} 
+type='text' 
+placeholder="first name" 
+ value={fullName.fName}
+/> 
+<input 
+name='lName'
+onChange={handleChange} 
+type='text' 
+placeholder="last name" 
+ value={fullName.lName}
+/> 
+
+example spread operator
+spread operator is ... full stop then the name of the array you want to spread example
+
+const citrus = ['Lime', 'Lemon', 'orange'];
+const fruits = ['apple', 'banana', 'coconut', ...citrus];
+console.log(fruits);
+
+
+using spread operator to simplify our code
+
+  const [fullName, setfullName] = useState({
+    fName: "",
+    lName: "",
+    email: ""
+  });
+
+  function handleChange(event){
+    const newValue = event.target.value;
+    const inputName = event.target.name;
+    
+      setfullName((preValue)=>{
+        return{
+          ...preValue,
+          [inputName] : newValue
+        };
+      });
+    }
+
+
+      <h1>{fullName.fName} {fullName.lName}</h1>
+         <p>{fullName.email}</p>
+<input 
+name='fName'
+onChange={handleChange} 
+type='text' 
+placeholder="first name" 
+ value={fullName.fName}
+/> 
+<input 
+name='lName'
+onChange={handleChange} 
+type='text' 
+placeholder="last name" 
+ value={fullName.lName}
+/> 
+<input 
+name='email'
+onChange={handleChange} 
+type='text' 
+placeholder="email" 
+ value={fullName.email}
+/> 

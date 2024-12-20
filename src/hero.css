@@ -19,10 +19,12 @@
 }
 
 .hero-section-left h3{
-  font-size: 20px;
-  line-height: 24.38px;
+    line-height: 24.38px;
   font-family: sans-serif;
   white-space: nowrap;
+  color: #171717;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .hero-section-left h1{
