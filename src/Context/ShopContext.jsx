@@ -42,13 +42,22 @@ const ShopContextProvider = (props) => {
             return total;
         }, 0);
 
+    const getTotalItemsInCart = () => 
+           Object.values(cartItems).reduce((totalinCart, quantity) =>{{ return totalinCart + quantity}
+           return totalinCart
+         },0);
+           
+      
+      console.log(getTotalItemsInCart)
+          
+
 
    const removeFromCart = (ItemId) =>{
       setcartItems((prev)=>({...prev,[ItemId]:prev[ItemId]-1}))
 
   }
    
-  const contextValue = {getTotalCartAmount, allProducts, cartItems, addToCart, removeFromCart};  
+  const contextValue = {getTotalItemsInCart, getTotalCartAmount, allProducts, cartItems, addToCart, removeFromCart};  
 
 
   return (
