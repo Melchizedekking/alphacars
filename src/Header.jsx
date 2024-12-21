@@ -9,8 +9,9 @@ const Header = () => {
 
   return (
     <section>
+      
       <div className='site-top'>
-        
+      
         <div className='first-container'>
           <p>Phone: +449034206331</p>
           <p>Email: john.iwudibie@gmail.com</p>
@@ -38,9 +39,9 @@ const Header = () => {
             className=''
             /></a>
           </div>
-       
+         
       </div>
-
+      
     </section>
   )
 }

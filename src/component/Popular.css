@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 12rem;
+  margin-top: 5rem;
   
   justify-content: center;
   
@@ -38,9 +38,7 @@
 }
 
 @media (max-width: 1250px){
-  .popular{
-      margin-top: 55rem;
-  }
+ 
   .popular-item{
     
     grid-template-columns: 1fr 1fr;
@@ -55,30 +53,23 @@
   }
 
   @media (max-width: 1060px){
-    .popular{
-        margin-top: 60rem;
-    }
+  
   
       
     }
 
     @media (max-width: 910px){
-      .popular{
-          margin-top: 65rem;
-      }
+      
     
     
         
       }
 
       @media (max-width: 850px){
-        .popular{
-            margin-top: 60rem;
-        }
+       
         .popular h1{
         
-          font-size: 30px;
-          font-weight: 500;
+          
         }
 
         .popular-item{
@@ -93,9 +84,7 @@
         }
 
         @media (max-width: 580px){
-          .popular{
-              margin-top: 68rem;
-          }
+     
   
        
         

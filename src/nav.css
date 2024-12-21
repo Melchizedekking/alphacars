@@ -9,6 +9,7 @@ body{
   background-color: #EEEEEE;
   padding: 2rem;
   z-index: 9999;
+  margin: 2rem 0;
  }
 
 .nav-main-container{
@@ -93,15 +94,16 @@ li{
   right: 0;
   bottom: 0;
   /* z-index: 999; */
-  background-color: #ffffff11;
+  background-color: white;
   backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px #0000001a;
- 
+  
+  
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  cursor: pointer;
 
 }
 
@@ -109,6 +111,13 @@ li{
 .mobileUl li {
   
   padding: 1rem;
+  
+  
+}
+
+.mobileUl a {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
   
 }
 
@@ -118,6 +127,7 @@ li{
 
 .close-btn{
   width: 2rem;
+
 }
 
 .w-full{

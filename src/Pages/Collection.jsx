@@ -2,8 +2,6 @@ import { useContext } from 'react'
 import './Css/Collection.css'
 import { ShopContext } from '../Context/ShopContext'
 import Iteam from '../component/Iteam'
-import Header from '../Header'
-import Nav from '../Nav'
 import dropdown from '../assets/dropdown.svg'
 
 const collection = (props) => {
@@ -13,8 +11,7 @@ const collection = (props) => {
   const {allProducts} = useContext(ShopContext)
   return (
     <>
-    <Header />
-    <Nav />
+    
     
     <div className='shop-category'>
       <img className='shopcategory-banner' src="" alt="" />

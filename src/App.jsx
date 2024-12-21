@@ -4,15 +4,17 @@ import "./App.css";
 import Nav from "./Nav";
 import { Routes,Route } from 'react-router-dom'
 import { Home,Collection,About,Product,Cart,Login,PlaceOrder,Orders,Contact} from './Pages/index'
+
 import Footer from "./component/Footer";
 import ShopContextProvider from "./Context/ShopContext";
+
 
 
 function App() {
   return <>
   <ShopContextProvider>
   <main className="position">
-   
+   <Nav />
 <Routes>
 <Route path='/' element={<Home/>} />
 <Route path='/about' element={<About/>} />

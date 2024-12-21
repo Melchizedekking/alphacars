@@ -13,8 +13,8 @@ import NewsLetter from "../component/NewsLetter"
 const Home = () => {
   return (
   <div>
-  <Header />
-  <Nav />
+  
+  
   <Hero />
   <Testimonial testimony={testimony}/>
   <Popular  />

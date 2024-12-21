@@ -1,13 +1,10 @@
-import Header from '../Header'
-import Nav from '../Nav'
 import './Css/Login.css'
 
 
 const Login = () => {
   return (
     <>
-    <Header />
-    <Nav />
+    
     <div className='loginsignup'>
       <div className="loginsignup-container">
        <h1>Sign Up</h1>
