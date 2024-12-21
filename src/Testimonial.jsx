@@ -13,7 +13,7 @@ const Testimonial = ({testimony}) => {
         <img 
         src={item.imgURL} 
         alt='quality'
-        width={'50px'}
+        className='testimonial-box-icon'
          />
          <h3 className='center'>{item.boxLabel}</h3>
          <p className='center'>{item.subText}</p>
