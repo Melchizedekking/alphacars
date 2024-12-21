@@ -1,6 +1,6 @@
 import Header from '../Header'
 import Nav from '../Nav'
-import './Css/login.css'
+import './Css/Login.css'
 
 
 const Login = () => {
