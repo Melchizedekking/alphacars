@@ -1,4 +1,4 @@
-import './Breadcrum.css'
+import './BreadCrum.css'
 import rightArrow from '../assets/rightArrow.svg'
 
    const BreadCrum = (props) => {
