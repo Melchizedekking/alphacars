@@ -4,7 +4,6 @@
   align-items: center;
   gap: 10px;
   margin-top: 5rem;
-  
   justify-content: center;
   
   
@@ -42,7 +41,7 @@
   .popular-item{
     
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    
     gap: 50px;
 
    
@@ -60,9 +59,8 @@
 
         .popular-item{
     
-          grid-template-columns: 1fr ;
-          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-          gap: 35px;
+          grid-template-columns: 1fr ;                  
+          
         
         }
       
