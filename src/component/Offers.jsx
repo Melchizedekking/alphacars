@@ -5,8 +5,10 @@ const Offers = () => {
   return (
     <div className='offers'>
       <div className="offers-left">
-       <h2>Exclusive</h2>
-       <h2>Offers For You</h2>
+       <h2>Exclusive 
+        <br />
+        <span> Offers For You </span>
+        </h2>
        <p>Only on best sellers products</p>
        <button>Check Now</button>
       </div>

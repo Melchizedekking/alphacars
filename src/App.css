@@ -5,10 +5,10 @@ html, body{
 
 .position{
   
-  max-width: 100%;
+  max-width: 1440px;
   
   background-color: #EEEEEE;
-  margin: 0;
+  margin: 0 auto;
 }
 
 

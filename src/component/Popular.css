@@ -52,25 +52,11 @@
     
   }
 
-  @media (max-width: 1060px){
-  
-  
-      
-    }
 
-    @media (max-width: 910px){
-      
-    
-    
-        
-      }
 
       @media (max-width: 850px){
        
-        .popular h1{
-        
-          
-        }
+       
 
         .popular-item{
     
@@ -83,9 +69,19 @@
           
         }
 
-        @media (max-width: 580px){
-     
-  
+        @media (max-width: 550px){
+          .popular h1{
+            font-size: 30px;
+          }
+
+          .popular hr{
+            width: 30%;
+            height: 6px;
+            border-radius: 10px;
+            background: #252525;
+            
+             
+          }
        
         
             

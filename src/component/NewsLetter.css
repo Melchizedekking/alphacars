@@ -24,15 +24,6 @@
   font-size: 20px;
 }
 
-.newsletter div{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 730px;
-  height: 70px;
-  border-radius: 80px;
-  border: 1px solid #1f1f1f;
-}
 
 .newsletter input{
   width: 500px;
@@ -52,4 +43,52 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media (min-width: 801px){
+  .newsletter div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 730px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid #1f1f1f;
+  }
+}
+
+
+@media (max-width: 800px){
+  .newsletter{
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    
+
+  }
+
+  .newsletter input{
+   width: 80%;
+   margin-left: 0;
+   margin-bottom: 10px;
+   border-radius: 9999px;
+   border: 1px solid #1f1f1f;
+   padding: 1.25rem;
+  }
+
+  .newsletter div button{
+    width: 80%;
+    padding: 1.25rem;
+    border: 1px;
+    
+    margin: 20px 0 10px 20px;
+
+  }
+
+  .newsletter h2{
+    font-size: 30px;
+    
+    
+  }
 }

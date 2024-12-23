@@ -1,3 +1,6 @@
+removebg
+
+
 e.target.value is where the value of inputted value is going to
 higher order function is a function that accepts another function example map
 

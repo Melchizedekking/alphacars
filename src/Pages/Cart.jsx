@@ -5,9 +5,7 @@ import Header from '../Header'
 
 const Cart = () => {
   return (
-    <div>
-      <Header />
-      <Nav />
+    <div>    
       <CartItems />
     </div>
   )
