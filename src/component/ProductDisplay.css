@@ -38,7 +38,7 @@
   
 }
 
-.productdisplay-right{
+.productdisplay-title{
   margin: 100px auto;
   display: flex;
   align-items: center;
@@ -46,62 +46,65 @@
   
 }
 
-.productdisplay-right h2{
-  font-size: 40px;
+.productdisplay-title h2{
+  font-size: 80px;
   font-weight: 700;
 }
 
-.productdisplay-right-stars{
+.productdisplay-category{
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.productdisplay-category span{
+  font-weight: 600;
+}
+
+.productdisplay-stars{
   display: flex;
   align-items: center;
-  margin-top: 13px;
-  gap: 5px;
+  margin-top: 5px;
+  gap: 10px;
   color: red;
-  font-size: 16px;
+  font-size: 50px;
+  justify-content: center;
 }
 
-.productdisplay-right-prices{
+.productdisplay-stars img{
+  width: 50px;
+}
+
+
+.productdisplay-prices{
   display: flex;
-  margin: 20px 0;
+  margin: 40px 0;
   gap: 30px;
-  font-size: 24px;
+  font-size: 50px;
   font-weight: 700;
+  justify-content: center;
 }
 
-.productdisplay-right-price-old{
+.productdisplay-price-old{
   text-decoration: line-through;
   color: #818181;       
 }
 
-.productdisplay-right-price-new{
+.productdisplay-price-new{
   color: red;
 }
 
-.productdisplay-right-description{
-  margin-bottom: 15px;
+.productdisplay-description{
+  margin: 15px auto;
+  font-size: 30px;  
 }
 
-.productdisplay-right-color h2{
-  /* margin-top: 20px; */
-  font-size: 30px;
-  font-weight: 600;
-}
-
-.productdisplay-right-colors{
+.display-button-container{
+  margin: 20px auto;
   display: flex;
-  margin: 15px 0 30px 0;
-  gap: 20px;
+  justify-content: space-between;
 }
 
-.productdisplay-right-colors div{
-  padding: 18px 24px;
-  background: #fefefe;
-  border: 1px solid rgb(188, 177, 177);
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.productdisplay-right button{
+.display-button{
   padding: 20px 40px;
   width: 200px;
   font-size: 16px;
@@ -114,14 +117,17 @@
   cursor: pointer;
 }
 
-.productdisplay-right-category{
-  margin-top: 10px;
+.productdisplay-right-colors div{
+  padding: 18px 24px;
+  background: #fefefe;
+  border: 1px solid rgb(188, 177, 177);
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-.productdisplay-right-category span{
-  font-weight: 600;
 
-}
+
+
 
 @media (max-width: 400px){
   

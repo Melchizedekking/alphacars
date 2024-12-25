@@ -5,9 +5,11 @@ import { useContext, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 import bugatti  from '../assets/new/1bugattiChiron.webp'
 import porsh from '../assets/new/1porch.jpg'
+import { useNavigate } from 'react-router-dom';
 
 
 const ProductDisplay = (props) => {
+  const navigate = useNavigate();
   
 
   const {product} = props;
@@ -18,6 +20,7 @@ const ProductDisplay = (props) => {
   const [threeBtn, setthreeBtn] = useState(false);
   const isActive = {borderColor:'red'};
   const isNotActive = {borderColor:'black'};
+  const goToCart = () =>{navigate('/cart');};
 
   
   return (
@@ -33,9 +36,17 @@ const ProductDisplay = (props) => {
      </div>
     
 
-<div className="productdisplay-right">
+<div className="productdisplay-title">
 <h2>{product.name}</h2>
-<div className="productdisplay-right-stars">
+<p className="productdisplay-category">
+  <span>Category:</span> {product.category}
+ </p>
+</div>
+
+
+
+
+<div className="productdisplay-stars">
   <img src={starFill} alt="" />
   <img src={starFill} alt="" />
   <img src={starFill} alt="" />
@@ -43,28 +54,28 @@ const ProductDisplay = (props) => {
   <img src={star} alt="" />
   <p>(122)</p>
 </div>
- <div className="productdisplay-right-prices">
-  <div className="productdisplay-right-price-old">
+
+<div className="productdisplay-prices">
+  <div className="productdisplay-price-old">
     ${product.oldPrice}
     </div> 
-  <div className="productdisplay-right-price-new">
+  <div className="productdisplay-price-new">
   ${product.newPrice}
     </div> 
 
  </div>
- 
- 
 
- <p className="productdisplay-right-category">
-  <span>Category:</span> {product.category}
- </p>
-
-
-</div>
-<div className="productdisplay-right-description">
+<div className="productdisplay-description">
   {product.description}
  </div>
- <button onClick={()=>{addToCart(product.id)}}>Add To Cart</button>
+ <div className='display-button-container'>
+ <button className='display-button' onClick={()=>{addToCart(product.id)}}>Add To Cart</button>
+ 
+ <button className='display-button' onClick={goToCart}>Check Out</button>
+ 
+ </div>
+ 
+
 </>
 
   )
