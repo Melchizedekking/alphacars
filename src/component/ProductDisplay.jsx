@@ -1,72 +1,72 @@
 import './ProductDisplay.css'
 import star from '../assets/star.svg'
 import starFill from '../assets/star-fill.svg'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
+import bugatti  from '../assets/new/1bugattiChiron.webp'
+import porsh from '../assets/new/1porch.jpg'
 
 
 const ProductDisplay = (props) => {
+  
 
   const {product} = props;
   const {addToCart} = useContext(ShopContext)
+  const [bigImage, setbigImage] = useState(product.image);
+  const [oneBtn, setoneBtn] = useState(true);
+  const [twoBtn, settwoBtn] = useState(false);
+  const [threeBtn, setthreeBtn] = useState(false);
+  const isActive = {borderColor:'red'};
+  const isNotActive = {borderColor:'black'};
+
+  
   return (
+    <>
     <div className="productdisplay">
-     <div className="productdisplay-left">
+    <img className='productdisplay-main-img' src={bigImage} alt="" />
       <div className="productdisplay-img-list">
-       <img src={product.image} alt="" />
-       <img src={product.image} alt="" />
-       <img src={product.image} alt="" />
-       <img src={product.image} alt="" />
+       <div style={oneBtn? isActive : isNotActive} onClick={()=>{setbigImage(product.image);setoneBtn(true);settwoBtn(false);setthreeBtn(false)}} className='productdisplay-img' ><img src={product.image} alt="" /></div>
+       <div style={twoBtn? isActive : isNotActive} onClick={()=>{setbigImage(bugatti);setoneBtn(false);settwoBtn(true);setthreeBtn(false)}} className='productdisplay-img' ><img src={bugatti} alt="" /></div>
+       <div style={threeBtn? isActive : isNotActive} onClick={()=>{setbigImage(porsh);setoneBtn(false);settwoBtn(false);setthreeBtn(true)}} className='productdisplay-img' ><img src={porsh} alt="" /></div>
+       
+     </div>        
      </div>
     
-     <div className="productdisplay-img">
-     <img className='productdisplay-main-img' src={product.image} alt="" />
-     </div>
-     </div>
-     <div className="productdisplay-right">
-      <h2>{product.name}</h2>
-      <div className="productdisplay-right-stars">
-        <img src={starFill} alt="" />
-        <img src={starFill} alt="" />
-        <img src={starFill} alt="" />
-        <img src={starFill} alt="" />
-        <img src={star} alt="" />
-        <p>(122)</p>
-      </div>
-       <div className="productdisplay-right-prices">
-        <div className="productdisplay-right-price-old">
-          {product.oldPrice}
-          </div> 
-        <div className="productdisplay-right-price-new">
-        {product.newPrice}
-          </div> 
 
-       </div>
-       <div className="productdisplay-right-description">
-        {product.description}
-       </div>
-       <div className="productdisplay-right-color">
-        <h2>Select Colour</h2>
-       
-       <div className="productdisplay-right-colors">
-        <div>Black</div>
-        <div>Blue</div>
-        <div>Silver</div>
-        <div>White</div>
-        <div>Green</div>
-        
-       </div>
-       </div>
-       <button onClick={()=>{addToCart(product.id)}}>Add To Cart</button>
-       <p className="productdisplay-right-category">
-        <span>Category:</span> {product.category}
-       </p>
-       <p className="productdisplay-right-category">
-        <span>Tag:</span> Modern, Latest
-       </p>
+<div className="productdisplay-right">
+<h2>{product.name}</h2>
+<div className="productdisplay-right-stars">
+  <img src={starFill} alt="" />
+  <img src={starFill} alt="" />
+  <img src={starFill} alt="" />
+  <img src={starFill} alt="" />
+  <img src={star} alt="" />
+  <p>(122)</p>
+</div>
+ <div className="productdisplay-right-prices">
+  <div className="productdisplay-right-price-old">
+    ${product.oldPrice}
+    </div> 
+  <div className="productdisplay-right-price-new">
+  ${product.newPrice}
+    </div> 
 
-    </div>
-    </div>
+ </div>
+ 
+ 
+
+ <p className="productdisplay-right-category">
+  <span>Category:</span> {product.category}
+ </p>
+
+
+</div>
+<div className="productdisplay-right-description">
+  {product.description}
+ </div>
+ <button onClick={()=>{addToCart(product.id)}}>Add To Cart</button>
+</>
+
   )
 }
 

@@ -5,7 +5,7 @@ import Iteam from '../component/Iteam'
 import dropdown from '../assets/dropdown.svg'
 
 const collection = (props) => {
-  console.log(props);
+  
 
   // we import the allproduct using context.
   const {allProducts} = useContext(ShopContext)
