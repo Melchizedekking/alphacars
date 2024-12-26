@@ -19,7 +19,7 @@ export const RelatedProducts = (props) => {
       <div className="relatedproducts-item">
       {limitedProducts.map(( item, i) => {
          
-          return <Iteam key={i} id={item.id} name={item.name} image={item.image} description={item.description} newPrice={item.newPrice} oldPrice={item.oldPrice} />
+          return <Iteam key={i} id={item.id} name={item.name} image={item.image} description={item.description} newPrice={item.newPrice} oldPrice={item.oldPrice}  />
       })}
       </div>
 

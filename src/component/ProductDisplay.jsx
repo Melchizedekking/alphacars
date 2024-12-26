@@ -1,7 +1,7 @@
 import './ProductDisplay.css'
 import star from '../assets/star.svg'
 import starFill from '../assets/star-fill.svg'
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../Context/ShopContext';
 import bugatti  from '../assets/new/1bugattiChiron.webp'
 import porsh from '../assets/new/1porch.jpg'
@@ -21,13 +21,14 @@ const ProductDisplay = (props) => {
   const isNotActive = {borderColor:'black'};
   const goToCart = () =>{navigate('/cart');};
 
+
   
   return (
     <>
-    <div className="productdisplay">
-    <img className='productdisplay-main-img' src={bigImage} alt="" />
+    <div  className="productdisplay">
+    <img  className='productdisplay-main-img' src={bigImage} alt="" />
       <div className="productdisplay-img-list">
-       <div style={oneBtn? isActive : isNotActive} onClick={()=>{setbigImage(product.image);setoneBtn(true);settwoBtn(false);setthreeBtn(false)}} className='productdisplay-img' ><img src={product.image} alt="" /></div>
+       <div style={oneBtn? isActive : isNotActive} onClick={()=>{setbigImage(product.image);setoneBtn(true);settwoBtn(false);setthreeBtn(false); }} className='productdisplay-img' ><img src={product.image} alt="" /></div>
        <div style={twoBtn? isActive : isNotActive} onClick={()=>{setbigImage(bugatti);setoneBtn(false);settwoBtn(true);setthreeBtn(false)}} className='productdisplay-img' ><img src={bugatti} alt="" /></div>
        <div style={threeBtn? isActive : isNotActive} onClick={()=>{setbigImage(porsh);setoneBtn(false);settwoBtn(false);setthreeBtn(true)}} className='productdisplay-img' ><img src={porsh} alt="" /></div>
        
@@ -74,7 +75,7 @@ const ProductDisplay = (props) => {
  
  </div>
 
-  <RelatedProducts product={product} />
+  <RelatedProducts product={product} setbigImage={setbigImage} />
  
 
 </>
