@@ -2,6 +2,9 @@
   width: 350px;
 }
 
+.item:hover .item-buttons{
+  display: flex;
+}
 .item-img{
   width: 340px;
 }
@@ -34,9 +37,11 @@
 }
 
 .item-buttons{
-  display: flex;
+  display: none;
   margin: 20px auto;
   justify-content: center;
+  gap: 10px;
+  
 }
 
 .item-buttons button{

@@ -6,13 +6,12 @@ import { ShopContext } from '../Context/ShopContext';
 import bugatti  from '../assets/new/1bugattiChiron.webp'
 import porsh from '../assets/new/1porch.jpg'
 import { useNavigate } from 'react-router-dom';
+import { RelatedProducts } from './RelatedProducts';
 
 
 const ProductDisplay = (props) => {
-  const navigate = useNavigate();
-  
-
   const {product} = props;
+  const navigate = useNavigate();
   const {addToCart} = useContext(ShopContext)
   const [bigImage, setbigImage] = useState(product.image);
   const [oneBtn, setoneBtn] = useState(true);
@@ -74,6 +73,8 @@ const ProductDisplay = (props) => {
  <button className='display-button' onClick={goToCart}>Check Out</button>
  
  </div>
+
+  <RelatedProducts product={product} />
  
 
 </>
