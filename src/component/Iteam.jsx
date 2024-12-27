@@ -1,18 +1,11 @@
 import { Link } from 'react-router-dom'
 import './Iteam.css'
-import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
  
  const Iteam = (props) => {
-  
   const {addToCart} = useContext(ShopContext)
-  
-  
-  
-   
    return (
-    
     <>
      
 
@@ -28,8 +21,6 @@ import { ShopContext } from '../Context/ShopContext'
       </div>
       <div className='item-buttons'>
         <button onClick={()=>{addToCart(props.id)}}>Add to cart</button>
-        
-       
         
       </div>
 

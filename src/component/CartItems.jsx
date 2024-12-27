@@ -1,36 +1,44 @@
 import React, { useContext } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../Context/ShopContext'
+import minus from '../assets/fileminus.svg'
+import plus from '../assets/fileplus.svg'
+
 
 const CartItems = () => {
-  const {getTotalCartAmount, allProducts, cartItems, removeFromCart} = useContext(ShopContext)
+  const {addToCart, getTotalCartAmount, allProducts, cartItems, removeFromCart} = useContext(ShopContext)
   return (
-    <div className='cartitems'>
-     <div className="cartitems-format-main">
-      <p>Products</p>
-      <p>Title</p>
-      <p>Price</p>
-      <p>Quantity</p>
-      <p>Total</p>
-      <p>Remove</p>
-      </div> 
-      <hr />
+    <>
+    <div className='cartItems-container'>
+    
+      
      {allProducts.map((e,i)=>{
       if(cartItems[e.id]>0){
       return  <div key={i} >
-      <div className="cartitems-format cartitems-format-main">
-        <img src={e.image} width={'350px'} alt="" className='carticon-product-icon'/>
-        <p>{e.name}</p>
-        <p>${e.newPrice}</p>
-        <button className='cartitems-quantity'>{cartItems[e.id]}</button>
-        <p>${e.newPrice*cartItems[e.id]}</p>
-        <button onClick={()=>{removeFromCart(e.id)}} className='cartitems-remove-icon' >del</button>
+      <div className="cartitems">
+        <img src={e.image} alt="" className='cartitemsBigImg'/>
+        <div>
+        <div className='cartItemsDetails'>
+        <p className='cartitemsTitle'>{e.name}</p>
+        <p className='cartitemsPrice'>${e.newPrice}</p>
+        </div>
+        <div className='cartitemsIcons' >
+        <img  onClick={()=>{addToCart(e.id)}} className='cartItemIcon'  src={plus} alt="" />
+        
+        <p>{cartItems[e.id]}</p>
+        <img  onClick={()=>{removeFromCart(e.id)}} className='cartItemIcon' src={minus} alt="" />
+        </div>
+        
+        <p className='itemAmount'>Total Amount: ${e.newPrice*cartItems[e.id]}</p>
+        </div>
       </div>
-      <hr />
+      
     </div>
       }
       return null;
      })}
+     </div>
+
      <div className="cartitems-down">
       <div className="cartitems-total">
         <h1>cart Totals</h1>
@@ -52,16 +60,10 @@ const CartItems = () => {
         </div>
         <button>PROCEED TO CHECKOUT</button>
       </div>
-      <div className="cartitems-promocode">
-        <p>If you have a promo code, Enter it here.</p>
-        <div className="cartitems-promobox">
-          <input type="text" placeholder='promo code' />
-          <button>Submit</button>
-        </div>
-
-      </div>
+     
      </div>
-    </div>
+     
+    </>
   )
 }
 

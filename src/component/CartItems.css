@@ -1,6 +1,76 @@
-.cartitems{
-  margin: 100px 170px;
+
+.cartItems-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  place-items: center;
+
 }
+
+.cartitems{
+  background-color: #ffffffa7;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px #0000001a;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  
+  
+  padding: 1rem 1rem;
+  gap: 1rem;
+  width: 450px;
+  border-radius: 20px;
+  flex: 1;
+  
+}
+
+.cartitemsBigImg{
+  width: 440px;
+}
+
+.cartItemIcon{
+  width: 50px;
+}
+
+.cartItemsDetails{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartitemsTitle{
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.cartitemsPrice{
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.cartitemsIcons{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.cartitemsIcons p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.itemAmount{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 10px 0;
+  color: red;
+}
+
+
 
 .cartitems hr{
   height: 3px;
@@ -8,15 +78,7 @@
   border: 0;
 }
 
-.cartitems-format-main{
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  gap: 75px;
-  padding: 20px 0;
-  font-style: 18px;
-  font-weight: 600;
-}
+
 
 .cartitems-format{
   font-size: 17px;    
@@ -71,43 +133,18 @@
   cursor: pointer;
 }
 
-.cartitems-promocode{
-  flex: 1;
-  font-size: 16px;
-  font-weight: 500;
+@media (max-width: 1000px){
+  .cartItems-container{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
 }
 
-.cartitems-promocode p{
-  color: #555;
- 
-}
 
-.cartitems-promobox{
-  width: 504px;
-  margin-top: 15px;
-  padding-left: 20px;
-  height: 58px;
-  background: white;
-}
 
-.cartitems-promobox input{
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 16px;
-  width: 330px;
-  height: 50px;
-}
 
-.cartitems-promobox button{
-  width: 170px;
-  height: 58px;
-  font-style: 16px;
-  background: black;
-  color: white;
-  cursor: pointer;     
-}
+
 
 
 
