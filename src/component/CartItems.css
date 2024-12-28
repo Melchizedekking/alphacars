@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   place-items: center;
+  gap: 20px;
 
 }
 
@@ -80,39 +81,22 @@
 
 
 
-.cartitems-format{
-  font-size: 17px;    
-  font-weight: 500;
-}
-
-.cartitems-remove-icon{
-  padding: 1px 2px;
-  height: 50px;
-  border: 2px solid #ebebeb ;
-  background: white;
-  cursor: pointer;  
-}
 
 
-.cartitems-quantity{
-  width: 64px;
-  height: 50px;
-  border: 2px solid #ebebeb ;
-  background: white;
-}
 
-.cartitems-down{
-  display: flex;
-  margin: 100px 0;
-}
 
 .cartitems-total{
+  display: flex;
+  margin: 100px auto;
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-right: 200px;
   gap: 40px;
+  justify-content: center;
+  width: 800px;
+  
 }
+
 
 .cartitems-total-item{
   display: flex;
@@ -121,16 +105,28 @@
 
 }
 
-.cartitems-total button{
-  width: 262px;
-  height: 58px;
+.cartitems-total-title{
+  font-size: 50px;
+  align-self: center;
+  font-weight: 700;
+}
+
+.cartitems-total-item p, .cartitems-total-item h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.cartitems-total-button{
+  width: 350px;
+  height: 100px;
   outline: none;
   border: none;
-  background: #ff5a5a;
+  background: red;
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 500;
   cursor: pointer;
+  align-self: center;
 }
 
 @media (max-width: 1000px){
@@ -140,6 +136,90 @@
   }
 
 }
+
+@media (max-width: 500px){
+  .cartitems{
+    width: 300px;
+  }
+
+  .cartitemsBigImg{
+    width: 290px;
+  }
+
+  .cartItemIcon{
+    width: 30px;
+  }
+
+  .cartitemsTitle{
+    font-weight: 500;
+    font-size: 25px;
+    
+  }
+
+  .cartitemsPrice{
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .cartitemsIcons p{
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .itemAmount{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+}
+
+@media (max-width: 1000px){
+  .cartitems-total-title{
+    font-size: 35px;
+ 
+  }
+
+  .cartitems-total-item p, .cartitems-total-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .cartitems-total-button{
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+  
+  }
+  .cartitems-total{
+
+    width: 400px;
+    
+  }
+  
+}
+
+@media (max-width: 450px){
+  .cartitems-total-title{
+    font-size: 25px;
+ 
+  }
+
+
+
+  .cartitems-total-button{
+    width: 220px;
+    height: 40px;
+    font-size: 13px;
+  
+  }
+  .cartitems-total{
+
+    width: 200px;
+    
+  }
+  
+}
+
 
 
 
