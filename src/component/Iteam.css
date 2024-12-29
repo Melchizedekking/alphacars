@@ -39,8 +39,8 @@
 .item-buttons{
   display: none;
   margin: 20px auto;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
   
 }
 

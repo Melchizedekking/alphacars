@@ -21,6 +21,7 @@ import { ShopContext } from '../Context/ShopContext'
       </div>
       <div className='item-buttons'>
         <button onClick={()=>{addToCart(props.id)}}>Add to cart</button>
+        <Link to={`/product/${props.id}`}><button>More Details</button></Link>
         
       </div>
 
